@@ -1,20 +1,22 @@
 var themename = 'themes/afrihostchatgroup';
 
-
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
-    sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
+    sass = require('gulp-sass'),
     globbing = require('gulp-css-globbing'),
     sourcemaps = require('gulp-sourcemaps'),
-    opn = require('opn');
+    fs = require('fs');
 
+
+if( fs.existsSync('./domain.json') ) {
+    var domain = require('./domain.json');
+}
 
 var root = themename + '/',
     scss = root + 'sass/',
     js = root + 'src/js/';
-
 
 var indexHtmlWatchFile = 'index.html',
     styleWatchFiles = scss + '**/*.scss';
@@ -23,13 +25,15 @@ var cssSRC = [
     root + 'styles.css'
 ];
 
-var server = {
-  host: 'localhost',
-  port: '8001'
-}
 
-function sass(){
-  return gulp.src([scss + 'styles.scss'])
+var imgSRC = root + 'src/images/*',
+    imgDEST = root + 'dist/images';
+
+
+
+function css(){
+
+    return gulp.src([scss + 'styles.scss'])
     .pipe(globbing({ extensions: ['.scss'] }))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass({
@@ -40,41 +44,32 @@ function sass(){
     .pipe(gulp.dest(root));
 }
 
+
 function printCSS(){
     return gulp.src(cssSRC)
     .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
     .pipe(gulp.dest(root));
 }
 
-function webserver(){
-  return gulp.src( '.' )
-    .pipe(webserver({
-      host:             server.host,
-      port:             server.port,
-      livereload:       true,
-      directoryListing: false
-    }));
-}
-
-function openbrowser(){
-  opn( 'http://' + server.host + ':' + server.port );
-}
 
 function watch(){
-  browserSync.init({
-        open: 'external'
-  });
-  gulp.watch('*.html').on('change', reload);
-  gulp.watch(styleWatchFiles, gulp.series([sass,printCSS]));
-  gulp.watch([indexHtmlWatchFile, root + 'styles.css']).on('change', browserSync.reload);
+    browserSync.init({
+        open: 'external',
+        proxy: domain,
+        host: 'local.afrihostchatgroup.co.za.dev',
+    });
+    gulp.watch('*.html').on('change', reload);
+    gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
+    gulp.watch(imgSRC);
+    gulp.watch([indexHtmlWatchFile, root + 'styles.css']).on('change', browserSync.reload);
+
 }
 
-exports.sass = sass;
+
+exports.css = css;
 exports.printCSS = printCSS;
-exports.webserver = webserver;
-exports.openbrowser = openbrowser;
 exports.watch = watch;
 
 
 var build = gulp.parallel(watch);
-gulp.task('default', build, sass , printCSS, webserver, openbrowser, watch);
+gulp.task('default', build);
