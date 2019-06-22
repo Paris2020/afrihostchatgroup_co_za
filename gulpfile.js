@@ -1,18 +1,14 @@
 var themename = 'themes/afrihostchatgroup';
 
+
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
+    sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
-    sass = require('gulp-sass'),
     globbing = require('gulp-css-globbing'),
     sourcemaps = require('gulp-sourcemaps'),
-    fs = require('fs');
-
-
-if( fs.existsSync('./domain.json') ) {
-    var domain = require('./domain.json');
-}
+    opn = require('opn');
 
 
 var root = themename + '/',
@@ -20,22 +16,20 @@ var root = themename + '/',
     js = root + 'src/js/';
 
 
-var indexPhpWatchFile = 'index.php',
+var indexHtmlWatchFile = 'index.html',
     styleWatchFiles = scss + '**/*.scss';
 
 var cssSRC = [
     root + 'styles.css'
 ];
 
+var server = {
+  host: 'localhost',
+  port: '8001'
+}
 
-var imgSRC = root + 'src/images/*',
-    imgDEST = root + 'dist/images';
-
-
-
-function css(){
-
-    return gulp.src([scss + 'styles.scss'])
+function sass(){
+  return gulp.src([scss + 'styles.scss'])
     .pipe(globbing({ extensions: ['.scss'] }))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass({
@@ -46,38 +40,41 @@ function css(){
     .pipe(gulp.dest(root));
 }
 
-
 function printCSS(){
     return gulp.src(cssSRC)
     .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
     .pipe(gulp.dest(root));
 }
 
-
-function watch(){
-    browserSync.init({
-        open: 'external',
-        proxy: domain,
-        baseDir: './',
-
-        ghostMode: {
-            clicks: true,
-            forms: true,
-            scroll: false
-        }
-    });
-    gulp.watch('*.html').on('change', reload);
-    gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
-    gulp.watch(imgSRC);
-    gulp.watch([indexPhpWatchFile, root + 'styles.css']).on('change', browserSync.reload);
-
+function webserver(){
+  return gulp.src( '.' )
+    .pipe(webserver({
+      host:             server.host,
+      port:             server.port,
+      livereload:       true,
+      directoryListing: false
+    }));
 }
 
+function openbrowser(){
+  opn( 'http://' + server.host + ':' + server.port );
+}
 
-exports.css = css;
+function watch(){
+  browserSync.init({
+        open: 'external'
+  });
+  gulp.watch('*.html').on('change', reload);
+  gulp.watch(styleWatchFiles, gulp.series([sass,printCSS]));
+  gulp.watch([indexHtmlWatchFile, root + 'styles.css']).on('change', browserSync.reload);
+}
+
+exports.sass = sass;
 exports.printCSS = printCSS;
+exports.webserver = webserver;
+exports.openbrowser = openbrowser;
 exports.watch = watch;
 
 
 var build = gulp.parallel(watch);
-gulp.task('default', build);
+gulp.task('default', build, sass , printCSS, webserver, openbrowser, watch);
