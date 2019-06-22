@@ -1,8 +1,8 @@
 // BASE FONTS
 // =============================================================================
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600';
+//@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600';
 
-$source-sans: 'Source Sans Pro', sans-serif;
+//$source-sans: 'Source Sans Pro', sans-serif;
 $base-font-size:    16px;
 $base-line-height:  28px;
 
@@ -135,24 +135,24 @@ $base-line-height:  28px;
           url('../fonts/Montserrat-BlackItalic.otf') format('otf');
 }
 
-$montserrat: 'Montserrat Regular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Thin', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Thin Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat ExtraLight', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat ExtraLight Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Light Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Medium Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat SemiBold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat SemiBold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Bold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Bold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat ExtraBold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat ExtraBold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Black', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$montserrat: 'Montserrat Black Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-regular: 'Montserrat Regular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-italic: 'Montserrat Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-thin: 'Montserrat Thin', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-thin-italic: 'Montserrat Thin Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-extraLight: 'Montserrat ExtraLight', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-extralight-italic: 'Montserrat ExtraLight Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-light: 'Montserrat Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-light-italic: 'Montserrat Light Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-medium: 'Montserrat Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-medium-italic: 'Montserrat Medium Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-semibold: 'Montserrat SemiBold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-semibold-italic: 'Montserrat SemiBold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-bold: 'Montserrat Bold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-bold-italic: 'Montserrat Bold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-extrabold: 'Montserrat ExtraBold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-extrabold-italic: 'Montserrat ExtraBold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-black: 'Montserrat Black', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat-black-talic: 'Montserrat Black Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
 
 // FONT MIXINS
