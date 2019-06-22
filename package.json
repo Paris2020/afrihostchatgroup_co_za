@@ -4,6 +4,7 @@
   "description": "Assessment file for Afrihost",
   "main": "gulpfile.js",
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,12 +18,12 @@
   },
   "homepage": "https://github.com/Paris2020/afrihostchatgroup_co_za#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-css-globbing": "^0.2.2",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "opn": "^6.0.0"
   }
 }
