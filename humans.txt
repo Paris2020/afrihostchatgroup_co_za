@@ -1,0 +1,13 @@
+Proudly built by Nelly Moseki
+
+Developer: Nelly Moseki
+Contact: dineo06.moseki[at]gmail.com
+Twitter: @MosekiNelly
+Instagram: @paris2020_
+Location: Johannesburg, South Africa
+
+/* SITE */
+Standards: HTML5, SASS, CSS3
+Components: Custom theme
+Software:  SublimeTxt, Git
+Hosting: Afrihost
