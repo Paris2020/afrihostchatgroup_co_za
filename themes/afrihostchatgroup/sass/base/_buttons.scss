@@ -1,0 +1,23 @@
+// BUTTONS
+// =============================================================================
+
+@mixin button($color:$black, $font-size:15px, $padding:12px 30px) {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1.5px solid;
+  color: $color;
+  font-weight: 600;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: $font-size;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  //@include transition(all 0.3s ease);
+  line-height: 1em;
+  padding: $padding;
+  &:hover {
+    background-color: rgba($color, 0.2);
+    text-decoration: none;
+    color: $color;
+    border-color: $color;
+  }
+}

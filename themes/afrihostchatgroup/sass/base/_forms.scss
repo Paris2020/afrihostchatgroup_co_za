@@ -1,0 +1,96 @@
+// REMOVE BROWSER DEFAULT FOCUS STATES
+// =============================================================================
+*:focus {
+  outline: 0;
+}
+
+
+// HIDE GRIPPIE
+// =============================================================================
+.grippie {
+  display: none;
+}
+
+// REMOVE WEBKIT'S ASSUMPTIONS ABOUT OUR BUTTONS!
+// =============================================================================
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]
+{
+  appearance: none;
+}
+
+button,
+input[type="button"],
+input[type="submit"]
+{
+  @include button($blue);
+}
+
+
+// STANDARD FORM STYLES
+// =============================================================================
+input[type="text"].form-control,
+input[type="password"],
+input[type="email"],
+textarea
+{
+  max-width: 100%;
+
+}
+
+// ERROR
+// =============================================================================
+input[type="text"].form-control,
+input[type="password"].form-control,
+input[type="email"].form-control,
+textarea
+{
+  //@include text-input();
+  &.error {
+    border: 1px solid $red !important;
+  }
+}
+
+
+//Error styling for Radio & Checkbox
+input[type="checkbox"].error + label.option span,
+input[type="radio"].error + label.option span
+{
+  border: 1px solid $red;
+}
+
+// FORM LABELS
+// =============================================================================
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+// REQUIRED COLOR
+// =============================================================================
+.form-required {
+  color: $red;
+}
+
+// TEXTAREA
+// =============================================================================
+textarea {
+  max-width: 100%;
+  min-height: 400px;
+}
