@@ -1,0 +1,161 @@
+// BASE FONTS
+// =============================================================================
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600';
+
+$source-sans: 'Source Sans Pro', sans-serif;
+$base-font-size:    16px;
+$base-line-height:  28px;
+
+// FONT INCLUDES
+// =============================================================================
+@font-face {
+    font-family: 'Montserrat Regular';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Regular'),
+          url('../fonts/Montserrat-Regular.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Italic'),
+          url('../fonts/Montserrat-Italic.otf') format('otfotf');
+}
+@font-face {
+    font-family: 'Montserrat Thin';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Thin'),
+          url('../fonts/Montserrat-Thin.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Thin Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Thin Italic'),
+          url('../fonts/Montserrat-ThinItalic.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat ExtraLight';
+    font-weight: normal;
+    font-style: normal;
+    src:  url('Montserrat ExtraLight'),
+          url('../fonts/Montserrat-ExtraLight.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat ExtraLight Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat ExtraLight Italic'),
+          url('../fonts/Montserrat-ExtraLightItalic.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Light';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Montserrat Light'),
+          url('../fonts/Montserrat-Light.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Light Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Light Italic'),
+          url('../fonts/Montserrat-LightItalic.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Medium';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Medium'),
+          url('../fonts/Montserrat-Medium.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Medium Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Medium Italic'),
+          url('../fonts/Montserrat-MediumItalic.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat SemiBold';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat SemiBold'),
+          url('../fonts/Montserrat-SemiBold.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat SemiBold Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat SemiBold Italic'),
+          url('../fonts/Montserrat-SemiBoldItalic.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Bold';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Bold'),
+          url('../fonts/Montserrat-Bold.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Bold Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Bold Italic'),
+          url('../fonts/Montserrat-BoldItalic.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat ExtraBold'),
+          url('../fonts/Montserrat-ExtraBold.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat ExtraBold Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat ExtraBold Italic'),
+          url('../fonts/Montserrat-ExtraBoldItalic.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Black';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Black'),
+          url('../fonts/Montserrat-Black.otf') format('otf');
+}
+@font-face {
+    font-family: 'Montserrat Black Italic';
+    font-weight: normal;
+    font-style: normal;
+    src:  local('Montserrat Black Italic'),
+          url('../fonts/Montserrat-BlackItalic.otf') format('otf');
+}
+
+$montserrat: 'Montserrat Regular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Thin', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Thin Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat ExtraLight', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat ExtraLight Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Light', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Light Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Medium', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Medium Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat SemiBold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat SemiBold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Bold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Bold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat ExtraBold', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat ExtraBold Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Black', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$montserrat: 'Montserrat Black Italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+
+// FONT MIXINS
+// =============================================================================
+
+
