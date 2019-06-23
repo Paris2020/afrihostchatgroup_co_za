@@ -56,7 +56,7 @@ function watch(){
     browserSync.init({
         open: 'external',
         proxy: domain,
-        host: 'local.afrihostchatgroup.co.za.dev',
+        baseDir: './'
     });
     gulp.watch('*.html').on('change', reload);
     gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
