@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     globbing = require('gulp-css-globbing'),
     sourcemaps = require('gulp-sourcemaps'),
-    fs = require('fs');
+    fs = require('fs'),
+    php = require('gulp-connect-php');
 
 
 if( fs.existsSync('./domain.json') ) {
@@ -24,11 +25,6 @@ var indexHtmlWatchFile = 'index.html',
 var cssSRC = [
     root + 'styles.css'
 ];
-
-
-var imgSRC = root + 'src/images/*',
-    imgDEST = root + 'dist/images';
-
 
 
 function css(){
@@ -51,16 +47,23 @@ function printCSS(){
     .pipe(gulp.dest(root));
 }
 
+function phpConnect(){
+
+    return php.server({
+        base: './',
+        port: 8888,
+        keepalive: true
+    });
+
+}
 
 function watch(){
     browserSync.init({
         open: 'external',
-        proxy: domain,
-        baseDir: './'
+        proxy: domain
     });
     gulp.watch('*.html').on('change', reload);
     gulp.watch(styleWatchFiles, gulp.series([css,printCSS]));
-    gulp.watch(imgSRC);
     gulp.watch([indexHtmlWatchFile, root + 'styles.css']).on('change', browserSync.reload);
 
 }
@@ -69,7 +72,8 @@ function watch(){
 exports.css = css;
 exports.printCSS = printCSS;
 exports.watch = watch;
+exports.phpConnect = phpConnect;
 
 
-var build = gulp.parallel(watch);
+var build = gulp.parallel(watch, phpConnect);
 gulp.task('default', build);
