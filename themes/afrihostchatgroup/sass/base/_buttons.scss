@@ -1,14 +1,14 @@
 // BUTTONS
 // =============================================================================
 
-@mixin button($color:$blue, $font-size:14px, $padding:12px 30px) {
+@mixin button($color:$blue, $font-size:14px, $padding:15px 30px) {
   background-color: $color;
   border-color: $btn-border;
   border: 1px solid;
   color: $white;
   display: inline-block;
   font-size: $font-size;
-  width: 239px;
+  width: 165px;
   height: 55px;
   text-align: left;
   text-transform: uppercase;
@@ -16,7 +16,6 @@
   cursor: pointer;
   box-shadow: 0 7px 15px 0 rgba(61,131,255,0.30);
   @include transition(all 0.3s ease);
-  line-height: 1em;
   padding: $padding;
   &:hover {
     text-decoration: none;
