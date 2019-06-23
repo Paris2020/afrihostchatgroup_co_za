@@ -65,20 +65,48 @@
             }
           }
         }
-        i{
-          font-family: "Font Awesome 5 Free";
+        .arrow-light{
+          position: relative;
+          z-index: 100;
+          font-size: 0;
+          color: $dark-blue;
+          @include border-radius(50%);
+          &:after,&:before{
+            content: "";
+            width: 10px;
+            height: 2px;
+            top: -10px;
+            background: $white;
+            position: absolute;
+            z-index: 999;
+          }
+          &:after{
+            right: 17px;
+            top: -3px;
+            @include rotate(-55deg);
+          }
+          &:before{
+            @include rotate(45deg);
+            right: 17px;
+          }
+          /*@include montserrat-thin;
           position: relative;
           color: $white;
           &:before{
+            content:"";
             right: 5px;
-            top: 25px;
+            top: -10px;
             position: absolute;
             background: $dark-blue;
             width: 45px;
             height: 45px;
-            line-height: 45px;
+            z-index: 999;
+            @include transform-rotate (-45deg);
             @include border-radius(50%);
           }
+          &:after{
+            @include transform-rotate (45deg);
+          }*/
           .btn{
             margin-top: 20px;
             @include montserrat-semibold;
