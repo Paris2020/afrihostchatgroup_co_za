@@ -65,21 +65,24 @@
             }
           }
         }
-
-        .btn{
-          margin-top: 20px;
-          //@extend %fa-icon;
-          //@extend .far;
-          @include montserrat-semibold;
-          @include border-radius($gutter2);
+        i{
+          font-family: "Font Awesome 5 Free";
+          position: relative;
+          color: $white;
           &:before{
-            //content: fa-content $fa-angle-right;
+            right: 5px;
+            top: 25px;
+            position: absolute;
             background: $dark-blue;
-            @include border-radius(50%);
-            display: inline-block;
             width: 45px;
             height: 45px;
-            margin-left: 197px;
+            line-height: 45px;
+            @include border-radius(50%);
+          }
+          .btn{
+            margin-top: 20px;
+            @include montserrat-semibold;
+            @include border-radius($gutter2);
           }
         }
       }
@@ -89,8 +92,6 @@
     font-size: 14px;
     color: $whatAppIcon;
     text-align: center;
-    position: relative;
-    bottom: 0;
     @include montserrat-semibold;
   }
 }
