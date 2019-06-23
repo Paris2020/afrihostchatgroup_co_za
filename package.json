@@ -24,7 +24,6 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-css-globbing": "^0.2.2",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "opn": "^6.0.0"
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
