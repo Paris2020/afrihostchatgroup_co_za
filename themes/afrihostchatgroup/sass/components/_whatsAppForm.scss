@@ -1,76 +1,97 @@
 // WhatApp Chat Help Sign Form
 // =============================================================================
 
-.form-wrapper{
-  background: $white;
-  width: 500px;
-  height: 470px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  @include border-radius($gutter/5);
-  @include transform(-50%, -50%);
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.05);
-  .form-header{
-    text-align: center;
-    i{
-      font-size: 60px;
-      background-color: $whatAppIcon;
-      &:hover{
-
+.container{
+  .form-wrapper{
+    background: $white;
+    width: 500px;
+    height: 470px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @include border-radius($gutter/5);
+    @include transform(-50%, -50%);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.05);
+    .form-header{
+      padding-top: $gutter2;
+      text-align: center;
+      i{
+        font-size: 60px;
+        color: $whatAppIcon;
+        @include transition(all 0.3s ease);
+        &:hover{
+          color: $whatsAppColor;
+        }
+      }
+      .intro-text{
+        margin: $gutter2 0;
+        h3{
+          font-size: 24px;
+          line-height: 29px;
+          color: $heading-grey;
+        }
+        p{
+          font-size: 14px;
+          line-height: 18px;
+          color: $whatAppIcon;
+        }
+        h3, p{
+          @include montserrat-medium;
+        }
       }
     }
-    h3{
-      font-size: 24px;
-      line-height: 28px;
-      color: $heading-grey;
-    }
-    p{
-      font-size: 14px;
-      line-height: 18px;
-      color: $whatAppIcon;
-    }
-    h3, p{
-      @include montserrat-medium;
+    .form-body{
+      text-align: center;
+      .signin-form{
+        .input-wrapper{
+          display: flex;
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 10px;
+          label{
+            margin-left: $gutter;
+            margin-top: 13px;
+            position: absolute;
+            @include montserrat-semibold;
+          }
+          .form-input{
+            height: 60px;
+            width: 440px;
+            order: -1;
+            @include montserrat-medium;
+            @include border-radius(4px);
+            &:focus + label{
+              color: $blue;
+            }
+          }
+        }
+
+        .btn{
+          margin-top: 20px;
+          //@extend %fa-icon;
+          //@extend .far;
+          @include montserrat-semibold;
+          @include border-radius($gutter2);
+          &:before{
+            //content: fa-content $fa-angle-right;
+            background: $dark-blue;
+            @include border-radius(50%);
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            margin-left: 197px;
+          }
+        }
+      }
     }
   }
-  .form-body{
+  .link{
+    font-size: 14px;
+    color: $whatAppIcon;
     text-align: center;
-    .signin-form{
-      .input-wrapper{
-        position: relative;
-        label{
-          margin-left: 15px;
-          margin-top: 13px;
-          position: absolute;
-          @include montserrat-semibold;
-        }
-        .form-input{
-          height: 60px;
-          width: 440px;
-          @include montserrat-medium;
-          @include border-radius(4px);
-        }
-      }
-
-      .btn{
-        margin-top: 20px;
-        //position: relative;
-        @include montserrat-semibold;
-        @include border-radius(30px);
-        &::before{
-          content: "";
-          background: url('images/icons/arrow_white.svg') no-repeat top right;
-          @include border-radius(50%);
-          background-size: 45px 45px;
-          display: inline-block;
-          width: 30px;
-          height: 30px;
-          margin-left: 197px;
-          //position: absolute;
-          fill: $dark-blue;
-        }
-      }
-    }
+    position: relative;
+    bottom: 0;
+    @include montserrat-semibold;
   }
 }
+
