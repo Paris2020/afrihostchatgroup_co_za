@@ -16,6 +16,9 @@
  dependencies shouldn't be a problem.
 */
 
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
+@import "util/**/*";
 @import "settings/*";
 @import "base/*";
 @import "pages/*";
