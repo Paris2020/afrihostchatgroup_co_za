@@ -1,0 +1,12 @@
+// LINK STYLES
+// =============================================================================
+
+a,
+a:link,
+a:visited, {
+  text-decoration: none;
+  color: $link;
+  &:hover {
+    text-decoration: none;
+  }
+}
