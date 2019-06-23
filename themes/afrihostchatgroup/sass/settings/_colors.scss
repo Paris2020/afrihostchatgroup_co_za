@@ -3,24 +3,34 @@
 
 $black: #000;
 $white: #fff;
-$grey: #dddddd;
+$grey: rgba(245,246,250,100);
 $green: #09896f;
 $red: #d52a32;
-$blue: #055885;
+$blue: #3D83FF;
 
 
 $link: $blue;
 
+$input-label: $blue;
+$input-focus: $blue;
+$input-border: #DFE3EB;
+$input-text: #8794AA;
 
-$green-rgba: rgba(9, 137, 111,0.90);
-$form-blue: #156ebb;
-$heading-blue: #196fbb;
+$btn-border: #979797;
+$btn-boxshadow: rgba(61,131,255,30);
 
 
-$light-brown: #997d66;
+$whatAppIcon: #BEC5D2;
+
+
 $light-blue: #86ccd5;
-$light-grey: #efefef;
+$dark-blue: #1767F4;
+
+$heading-blue: #196fbb;
+$heading-grey: #8794AA;
+
 $box-grey: #a09d9d;
+
 $focus-color: $blue;
 $focus: $focus-color;
 
