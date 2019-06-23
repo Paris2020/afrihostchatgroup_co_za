@@ -1,2 +1,129 @@
 //TYPOGRAPHY
 //==============================================================================
+
+$font-family: 'Montserrat Regular';
+
+// FONT MIXINS
+// =============================================================================
+@mixin montserrat-regular {
+  font-family: 'Montserrat Regular';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-italic {
+  font-family: 'Montserrat Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-thin {
+  font-family: 'Montserrat Thin';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-thin-italic {
+  font-family: 'Montserrat Thin Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-extraLight {
+  font-family: 'Montserrat ExtraLight';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-extralight-italic {
+  font-family: 'Montserrat ExtraLight Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-light {
+  font-family: 'Montserrat Light';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-light-italic {
+  font-family: 'Montserrat Light Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-medium {
+  font-family: 'Montserrat Medium';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-medium-italic {
+  font-family: 'Montserrat Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-semibold {
+  font-family: 'Montserrat SemiBold';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-semibold-italic {
+  font-family: 'Montserrat SemiBold Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-bold {
+  font-family: 'Montserrat Bold';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-bold-italic {
+  font-family: 'Montserrat Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-extrabold {
+  font-family: 'Montserrat ExtraBold';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-extrabold-italic {
+  font-family: 'Montserrat ExtraBold Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-black {
+  font-family: 'Montserrat Black';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin montserrat-black-talic {
+  font-family: 'Montserrat Black Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+// BASE FONT
+// =============================================================================
+
+html {
+  @include montserrat-regular;
+  font-size: 18px;
+}
+
+
+// TEXT STYLES
+// =============================================================================
+b, strong { font-weight: bold; }
+em { font-style: italic; }

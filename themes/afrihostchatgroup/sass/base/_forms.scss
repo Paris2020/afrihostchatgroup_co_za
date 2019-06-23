@@ -45,7 +45,7 @@ input[type="submit"]
 
 // STANDARD FORM STYLES
 // =============================================================================
-input[type="text"].form-control,
+input[type="text"].form-input,
 input[type="password"],
 input[type="email"],
 textarea
@@ -56,12 +56,12 @@ textarea
 
 // ERROR
 // =============================================================================
-input[type="text"].form-control,
-input[type="password"].form-control,
-input[type="email"].form-control,
+input[type="text"].form-input,
+input[type="password"].form-input,
+input[type="email"].form-input,
 textarea
 {
-  //@include text-input();
+  @include text-input();
   &.error {
     border: 1px solid $red !important;
   }
@@ -78,8 +78,9 @@ input[type="radio"].error + label.option span
 // FORM LABELS
 // =============================================================================
 label {
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 13px;
+  line-height: 16px;
+  color: $input-label;
 }
 
 // REQUIRED COLOR
