@@ -12,6 +12,10 @@
     @include border-radius($gutter/5);
     @include transform(-50%, -50%);
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.05);
+    @include breakpoint($mobile){
+      width: 90%;
+      max-width: 500px;
+    }
     .form-header{
       padding-top: $gutter2;
       text-align: center;
