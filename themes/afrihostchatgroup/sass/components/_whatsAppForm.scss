@@ -2,6 +2,7 @@
 // =============================================================================
 
 .container{
+  position: relative;
   .form-wrapper{
     background: $white;
     width: 500px;
@@ -93,24 +94,6 @@
             @include rotate(45deg);
             right: 17px;
           }
-          /*@include montserrat-thin;
-          position: relative;
-          color: $white;
-          &:before{
-            content:"";
-            right: 5px;
-            top: -10px;
-            position: absolute;
-            background: $dark-blue;
-            width: 45px;
-            height: 45px;
-            z-index: 999;
-            @include transform-rotate (-45deg);
-            @include border-radius(50%);
-          }
-          &:after{
-            @include transform-rotate (45deg);
-          }*/
           .btn{
             margin-top: 20px;
             @include montserrat-semibold;
@@ -120,11 +103,20 @@
       }
     }
   }
-  .link{
-    font-size: 14px;
-    color: $whatAppIcon;
-    text-align: center;
-    @include montserrat-semibold;
+  .form-footer{
+    position: fixed;
+    bottom: -45px;
+    left: 38%;
+    @include breakpoint($mobile){
+      left: 33%;
+    }
+    .link{
+      font-size: 14px;
+      color: $whatAppIcon;
+      display: block;
+      text-align: center;
+      @include montserrat-semibold;
+    }
   }
 }
 
