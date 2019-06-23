@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/Paris2020/afrihostchatgroup_co_za#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "breakpoint-sass": "^2.7.1",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-connect-php": "^1.0.3",
     "gulp-css-globbing": "^0.2.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
