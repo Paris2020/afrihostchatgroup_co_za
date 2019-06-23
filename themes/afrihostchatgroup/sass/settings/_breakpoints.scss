@@ -1,0 +1,46 @@
+// BREAKPOINT VARIABLES
+// =============================================================================
+
+$max-width:1440px;
+
+//Min-widths
+$small-up: 481px;
+$tablet-up: 769px;
+$desktop-up: 935px;
+$almost-wide: 1070px;
+
+$wide: 1202px;
+$x-wide: 1500px;
+$wide-max: $max-width;
+
+$small-landscape: (min-width 481px) (max-width 640px);
+
+// Max Widths
+$smaller: max-width 320px;
+$small: max-width 480px;
+$mobile: max-width ($tablet-up - 1px);
+$tablet-less-than: max-width ($tablet-up - 2px);
+$tablet: max-width ($desktop-up - 1px);
+$desktop: max-width ($almost-wide - 1px);
+
+$mobile-only: $mobile;
+$tablet-only: ($tablet-up + 1px) ($desktop-up - 1px);
+
+
+// JAVASCRIPT BREAKPOINTS
+// =============================================================================
+
+html:before {
+  content: "desktop";
+  display: none; /* Prevent from displaying. */
+}
+@include breakpoint($tablet) {
+  html:before {
+    content: "tablet";
+  }
+}
+@include breakpoint($mobile) {
+  html:before {
+    content: "mobile";
+  }
+}
