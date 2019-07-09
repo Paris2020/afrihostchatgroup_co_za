@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Paris2020/afrihostchatgroup_co_za.git"
   },
-  "author": "",
+  "author": "Nelly Moseki",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Paris2020/afrihostchatgroup_co_za/issues"
@@ -27,5 +27,6 @@
     "gulp-css-globbing": "^0.2.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
-  }
+  },
+  "dependencies": {}
 }
